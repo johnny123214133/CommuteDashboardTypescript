@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# Commute Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This version of the project uses React + Typescript. I built it to start teaching myself Typescript.
 
-Currently, two official plugins are available:
+## Obtaining Google Maps API Key and Map ID
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I did not include my key and ID in this repository. Follow the instructions listed below to set up and use your own keys
+in this project:
 
-## Expanding the ESLint configuration
+1. [Google Maps API Key Setup](https://developers.google.com/maps/documentation/javascript/get-api-key) If restricting your key's access, ensure that your key is given Route and Places API permissions
+2. [Google Maps Map ID Setup](https://developers.google.com/maps/documentation/get-map-id) You just need to complete the steps through generating an ID
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Running the Project
 
-- Configure the top-level `parserOptions` property like this:
+After cloning the repo:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. add your API key and map ID to the `.env` file
+2. `npm install`
+3. `npm run dev`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Todo
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Now that I've adapted the original React + JavaScript project into React + Typescript, I plan to:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clean up the code a bit
+2. Refactor added interfaces adopting best practices
+3. Refactor Component code adopting best practices
